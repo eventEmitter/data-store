@@ -12,18 +12,20 @@ export default class Controller {
     constructor({
         name,
         service,
+        primaryId = 'id'
     } = {}) {
         assert(name, `Missing option 'name'!`);
         assert(name, `Missing option 'service'!`);
         this.name = name;
         this.service = service;
+        this.primaryId = primaryId;
 
         this.enabledMethods = new Set();
         this.methodConfig = new Map([
             ['create', {
                 method: 'post',
                 status: 201,
-                redirect: 'id',
+                redirect: primaryId,
                 type: 'application/json',
                 writing: true,
             }],
@@ -122,7 +124,7 @@ export default class Controller {
 
                             if (config.redirect) {
                                 response.status(303);
-                                response.append('location', `/${this.service}.${this.name}/${data[config.redirect]}`);
+                                response.append('Location', `/${this.service}.${this.name}/${data[config.redirect]}`);
                                 response.end();
                             } else {
                                 if (type.object(data)) data = JSON.stringify(data);

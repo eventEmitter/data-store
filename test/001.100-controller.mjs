@@ -6,7 +6,7 @@ import {SpecReporter} from 'section-tests';
 import assert from 'assert';
 import Server from '../src/Server.mjs';
 import Controller from '../src/lib/Controller.mjs';
-import request from 'request-promise';
+import request from 'request-promise-native';
 import log from 'ee-log';
 
 
