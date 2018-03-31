@@ -1,0 +1,38 @@
+{
+  "name": "data-store",
+  "version": "1.0.0",
+  "description": "INFECT RDS Data Store",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "node --experimental-modules ./node_modules/.bin/section ./test/*.mjs --subenv-testing --dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infect-org/data-store.git"
+  },
+  "keywords": [
+    "infect",
+    "rda",
+    "data-store"
+  ],
+  "author": "Michael van der Weg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/infect-org/data-store/issues"
+  },
+  "homepage": "https://github.com/infect-org/data-store#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ee-log": "^3.0.6",
+    "ee-types": "^2.1.4",
+    "envr": "^2.1.2",
+    "express": "^4.16.3",
+    "related": "^2.15.0",
+    "related-timestamps": "^2.0.0",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "section-tests": "^2.0.0"
+  }
+}
