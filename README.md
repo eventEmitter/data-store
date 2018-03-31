@@ -1,5 +1,7 @@
 # Data Store Service
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/eventEmitter/data-store.svg)](https://greenkeeper.io/)
+
 A simple data storage service. Stores data without a schema
 inside of a relational database. Keeps it searchable and fast
 retrievable.
